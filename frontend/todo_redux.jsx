@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { receiveTodos, receiveTodo } from './actions/todo_actions';
+import allTodos from './reducers/selectors';
 
 
 
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.receiveTodo = receiveTodo;
+  window.allTodos = allTodos;
   //
 
   const root = document.getElementById('root');
